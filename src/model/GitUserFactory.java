@@ -10,6 +10,9 @@ public class GitUserFactory {
 		this.gitApi=gitApi;
 	}
 	
+	/*
+	 * Given a github username, construct a GitUser object
+	 */
 	public GitUser getUser(String username){
 		GitUser user=new GitUser(username);
 		String response=gitApi.getUserInformation(user.getUserUrl());

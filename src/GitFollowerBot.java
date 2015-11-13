@@ -6,15 +6,14 @@ import model.RequestDispatcher;
 
 public class GitFollowerBot {
 	public static void main(String [] args) throws IOException{
-		//test
+
 		GitApi gitApi=new GitApi(new RequestDispatcher());
 		GitUserFactory factory=new GitUserFactory(gitApi);
 		
-		GitUser imraaz=factory.getUser("imraazrally");
+		GitUser user=factory.getUser("imraazrally");
+		String[] listOfFollowers=gitApi.getListOfFollowerUsernames(user);
 		
-		for(String username:gitApi.getListOfFollowerUsernames(imraaz)){
-			System.out.println(username);
-		}
+		for(String username: listOfFollowers) System.out.println(username);
 		
 	}
 }

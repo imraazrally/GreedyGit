@@ -9,15 +9,27 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 public class GitApi {
+	/*
+	 * This class is responsible for the request and response messages
+	 */
+	
 	private RequestDispatcher dispatcher;
 	
 	public GitApi(RequestDispatcher dispatcher){
 		this.dispatcher=dispatcher;
 	}
 	
+	/*
+	 * Given api.github.com/users/:username -> retrieve the JSON response
+	 */
+	
 	public String getUserInformation(String userUrl){
 		return this.dispatcher.get(userUrl);
 	}
+	
+	/*
+	 * Given a User, retrieve a list of follower usernames
+	 */
 	
 	public String[] getListOfFollowerUsernames(GitUser user){
 		//an array of usernames (size=number of followers)
