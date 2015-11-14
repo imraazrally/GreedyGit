@@ -6,7 +6,7 @@ import model.RequestDispatcher;
 
 public class GitFollowerBot {
 	public static void main(String [] args) throws IOException{
-
+		//example for getting a list of followers given a username
 		GitApi gitApi=new GitApi(new RequestDispatcher());
 		GitUserFactory factory=new GitUserFactory(gitApi);
 		
