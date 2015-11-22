@@ -20,7 +20,7 @@ public class GitUserFactory {
 		
 		//Updating UserInformation using the json response
 		user.setFollowers((int)jsonResponse.get("followers"));
-		user.setFollowing((int)jsonResponse.get("followers"));
+		user.setFollowing((int)jsonResponse.get("following"));
 		
 		return user;
 	}

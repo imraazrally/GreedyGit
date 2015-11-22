@@ -6,14 +6,20 @@ import java.net.ProtocolException;
 import java.net.URL;
 
 public class RequestDispatcher {
-	public String get(String url){
+	private String accessToken;
+	
+	public RequestDispatcher(String accessToken){
+		this.accessToken=new StringBuilder("?access_token=").append(accessToken).toString();
+	}
+	
+	public String fetch(String url, String method){
 		StringBuilder outputBuffer=new StringBuilder();
 		try{
-			HttpURLConnection request=(HttpURLConnection)new URL(url).openConnection();
+			HttpURLConnection request=(HttpURLConnection)new URL(url+accessToken).openConnection();
 			int ch;
 
 			//Sending the request
-			request.setRequestMethod("GET");
+			request.setRequestMethod(method);
 			request.setInstanceFollowRedirects(true);
 			request.setDoInput(true);
 			
