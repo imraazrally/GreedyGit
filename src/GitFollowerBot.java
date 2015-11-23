@@ -13,7 +13,7 @@ public class GitFollowerBot {
 		
 		GitApi gitApi=
 				new GitApi(
-							//Passing the Access Token to Request Dispatcher;
+							//Passing the Access Token to Request Dispatcher; Change to args[0]
 							new RequestDispatcher("YOUR ACCESS TOKEN GOES HERE.")
 						  );
 		
