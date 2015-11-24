@@ -10,7 +10,8 @@ import model.RequestDispatcher;
 
 public class GitFollowerBot {
 	public static void main(String [] args) throws IOException{
-		String ACCESS_TOKEN="YOUR ACCESS TOKEN";
+		//Update to get info from standard input
+		String ACCESS_TOKEN="e2d189d19461b0fce99fb39200a396e0c96198d5";
 		String PARENT_USERNAME="imraazrally";
 		
 		GitApi gitApi=new GitApi(
@@ -19,10 +20,10 @@ public class GitFollowerBot {
 						  );
 		
 		//Parent User from which we will extract all the followers recursively
-		GitUser Parent=gitApi.getFactory().getUser(PARENT_USERNAME);
+		GitUser parent=gitApi.getFactory().getUser(PARENT_USERNAME);
 		
 		//Recursively treverse followers, and their followers, and so on.
-		followUsersAtDepthN(Parent,gitApi,10);
+		followUsersAtDepthN(parent,gitApi,10);
 		
 	}
 	
@@ -32,9 +33,7 @@ public class GitFollowerBot {
 		//Follow each follower from current level, and GET their followers as well (recusively).
 		for(String username: gitApi.getListOfFollowerUsernames(parentUser)){
 			
-			GitUser user=gitApi
-							.getFactory()
-							.getUser(username);	
+			GitUser user=gitApi.getFactory().getUser(username);	
 			//------------------Follow!------------------
 			gitApi.follow(user);
 			//-------------------------------------------
