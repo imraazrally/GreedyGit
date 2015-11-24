@@ -10,6 +10,7 @@ import model.RequestDispatcher;
 
 public class GitFollowerBot {
 	public static void main(String [] args) throws IOException{
+		//Do input validation!!!
 		String accessToken=args[0];
 		String parentUsername=args[1];
 		
