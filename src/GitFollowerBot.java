@@ -18,10 +18,10 @@ public class GitFollowerBot {
 					);
 		
 		//Parent User from which we will extract all the followers recursively
-		GitUser Parent=gitApi.getFactory().getUser("imraazrally");
+		GitUser parent=gitApi.getFactory().getUser(parentUsername);
 		
 		//Recursively treverse followers, and their followers, and so on.
-		followUsersAtDepthN(Parent,gitApi,2);
+		followUsersAtDepthN(parent,gitApi,2);
 		
 	}
 	
