@@ -14,14 +14,14 @@ public class GitFollowerBot {
 		GitApi gitApi=
 				new GitApi(
 							//Passing the Access Token to Request Dispatcher;
-							new RequestDispatcher("YOUR ACCESS TOKEN GOES HERE.")
+							new RequestDispatcher("e2d189d19461b0fce99fb39200a396e0c96198d5")
 						  );
 		
 		//Parent User from which we will extract all the followers recursively
-		GitUser Parent=gitApi.getFactory().getUser("imraazrally");
+		GitUser Parent=gitApi.getFactory().getUser("pinoniq");
 		
 		//Recursively treverse followers, and their followers, and so on.
-		followUsersAtDepthN(Parent,gitApi,2);
+		followUsersAtDepthN(Parent,gitApi,10);
 		
 	}
 	
