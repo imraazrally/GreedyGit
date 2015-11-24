@@ -10,12 +10,12 @@ import model.RequestDispatcher;
 
 public class GitFollowerBot {
 	public static void main(String [] args) throws IOException{
+		String accessToken=args[0];
+		String parentUsername=args[1];
 		
-		GitApi gitApi=
-				new GitApi(
-							//Passing the Access Token to Request Dispatcher;
-							new RequestDispatcher(args[0])
-						  );
+		GitApi gitApi=new GitApi(//Passing the Access Token to Request Dispatcher;
+						new RequestDispatcher(accessToken);
+					);
 		
 		//Parent User from which we will extract all the followers recursively
 		GitUser Parent=gitApi.getFactory().getUser("imraazrally");
