@@ -13,8 +13,8 @@ public class GitFollowerBot {
 		
 		GitApi gitApi=
 				new GitApi(
-							//Passing the Access Token to Request Dispatcher; Change to args[0]
-							new RequestDispatcher("YOUR ACCESS TOKEN GOES HERE.")
+							//Passing the Access Token to Request Dispatcher;
+							new RequestDispatcher(args[0])
 						  );
 		
 		//Parent User from which we will extract all the followers recursively
