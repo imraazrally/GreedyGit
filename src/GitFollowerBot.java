@@ -11,7 +11,7 @@ import model.RequestDispatcher;
 public class GitFollowerBot {
 	public static void main(String [] args) throws IOException{
 		//Update to get info from standard input
-		String ACCESS_TOKEN="e2d189d19461b0fce99fb39200a396e0c96198d5";
+		String ACCESS_TOKEN="e2d189d19461b0fce9939200a39e0c96198d5";
 		String PARENT_USERNAME="imraazrally";
 		
 		GitApi gitApi=new GitApi(
