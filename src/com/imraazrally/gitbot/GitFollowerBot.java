@@ -14,18 +14,20 @@ import com.imraazrally.gitbot.model.RequestDispatcher;
 public class GitFollowerBot {
 	
 	public static void main(String [] args) throws IOException{
-		s
+		
 		try{
 			String PROGRAM_MODE=args[0].toLowerCase();
 			String ACCESS_TOKEN=args[1];
 			String USERNAME=args[2];
 			
-			if((!PROGRAM_MODE.equals("follow") && !PROGRAM_MODE.equals("unfollow")) && !PROGRAM_MODE.equals("commit"))return;
+			if(!PROGRAM_MODE.equals("follow") && !PROGRAM_MODE.equals("unfollow") && !PROGRAM_MODE.equals("commit"))
+				return;
+			
 			if(ACCESS_TOKEN==null || USERNAME==null) return;
 					
 			GitApi gitApi=new GitApi(
-										//Passing the Access Token to Request Dispatcher;
-										new RequestDispatcher(ACCESS_TOKEN)							
+								//Passing the Access Token to Request Dispatcher;
+								new RequestDispatcher(ACCESS_TOKEN)							
 						   );
 
 			//Parent User from which we will extract all the followers recursively
