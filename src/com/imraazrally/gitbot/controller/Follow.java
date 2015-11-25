@@ -5,15 +5,7 @@ import com.imraazrally.gitbot.model.GitUser;
 
 public class Follow {
 	
-	public static void follow(String args[], GitApi gitApi, GitUser myAccount){
-		GitUser baseParent=gitApi.getFactory().getUser(args[3]);
-		int levels=Integer.parseInt(args[4]);
-		int interval=Integer.parseInt(args[5]);
-		//Recursively treverse followers, and their followers, and so on.
-		followUsersAtDepthN(myAccount,baseParent,gitApi,levels, interval); 
-	}
-	
-	private static void followUsersAtDepthN(GitUser myAccount, GitUser parent, GitApi gitApi, int level, int interval){
+	public static void followUsersAtDepthN(GitUser myAccount, GitUser parent, GitApi gitApi, int level, int interval){
 		if(level<1)return;
 				
 		//Follow each follower from current level, and GET their followers as well (recusively).
