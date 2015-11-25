@@ -46,31 +46,16 @@ public class GitFollowerBot {
 			String PROGRAM_MODE=args[0].toLowerCase();
 			String ACCESS_TOKEN=args[1];
 			String USERNAME=args[2];
-			
-			/*
-			 *  Retreiving input from STDIN to determine whether to follow/unfollow
-			 */
-			
+	
 			if(!PROGRAM_MODE.equals("follow") && !PROGRAM_MODE.equals("unfollow"))return;
 			if(ACCESS_TOKEN==null || USERNAME==null) return;
-					
-			/*
-			 *	GitApi contains the core functionality 
-			 *  The RequestDispatcher does the HTTP Communication 
-			 */
 			
 			GitApi gitApi=new GitApi(
 								//Passing the Access Token to Request Dispatcher;
 								new RequestDispatcher(ACCESS_TOKEN)							
 						   );
 
-			
-			/*
-			 *  The Main Account [Yours]
-			 */
 			GitUser myAccount=gitApi.getFactory().getUser(USERNAME);
-			
-			
 			
 			if(PROGRAM_MODE.equals("follow")){
 				GitUser baseParent=gitApi.getFactory().getUser(args[3]);
