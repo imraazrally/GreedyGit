@@ -14,7 +14,7 @@ import com.imraazrally.gitbot.model.RequestDispatcher;
 public class GitFollowerBot {
 	
 	public static void main(String [] args) throws IOException{
-		
+		s
 		try{
 			String PROGRAM_MODE=args[0].toLowerCase();
 			String ACCESS_TOKEN=args[1];
