@@ -43,9 +43,5 @@ public class GitFollowerBot {
 		System.out.println("Thank you for using GitFollower! My name is Imraaz Rally! www.imraazrally.com");
 	}
 	
-
-	
-	
-	
 	
 }
