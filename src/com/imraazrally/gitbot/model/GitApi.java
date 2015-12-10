@@ -85,8 +85,9 @@ public class GitApi {
 		for (int i=0; i<size; i++){
 			try{
 				users[i]=(String)jsonResponse.getJSONObject(i).get("login");
+				System.out.println("OK..\n");
 			}catch(Exception e){
-				e.printStackTrace();
+				System.out.println("Skipped...\n");
 			}
 		}
 		return users;

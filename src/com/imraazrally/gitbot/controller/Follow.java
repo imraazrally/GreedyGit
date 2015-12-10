@@ -24,7 +24,7 @@ public class Follow {
 			try{
 				Thread.sleep(interval*1000);
 			}catch(Exception e){
-				e.printStackTrace();
+				System.out.println("Wait...");
 			}
 			
 			followersInCurrentLevel.add(user);
