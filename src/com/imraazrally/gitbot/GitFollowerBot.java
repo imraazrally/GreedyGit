@@ -24,7 +24,6 @@ public class GitFollowerBot {
 			 *  2. Remove the weed. (unfollow users who has not followed back).
 			 *
 			 *
-			 *
 			 *  1. Suppose the user account is 'imraazrally' and accesstoken is '1234'
 			 *  2. Suppose the desired parent user account is 'markzuck'
 			 *  3. Suppose you want to extract users upto a depth of 10 levels down the tree
