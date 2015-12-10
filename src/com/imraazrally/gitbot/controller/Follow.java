@@ -1,5 +1,8 @@
 package com.imraazrally.gitbot.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.imraazrally.gitbot.model.GitApi;
 import com.imraazrally.gitbot.model.GitUser;
 
@@ -7,8 +10,9 @@ public class Follow {
 	
 	public static void followUsersAtDepthN(GitUser myAccount, GitUser parent, GitApi gitApi, int level, int interval){
 		if(level<1)return;
+		List<GitUser> followersInCurrentLevel=new ArrayList<GitUser>();
 				
-		//Follow each follower from current level, and GET their followers as well (recusively).
+		//Following All followers in current level. (Bredth-first)
 		for(String username: gitApi.getListOfFollowerUsernames(parent)){
 			
 			GitUser user=gitApi.getFactory().getUser(username);	
@@ -23,9 +27,12 @@ public class Follow {
 				e.printStackTrace();
 			}
 			
-			//-------------------------------------------
-			followUsersAtDepthN(myAccount,user,gitApi,level-1,interval);
+			followersInCurrentLevel.add(user);
 		}	
+		
+		//moving to next level.
+		for (GitUser user: followersInCurrentLevel)
+			followUsersAtDepthN(myAccount,user,gitApi,level-1,interval);
 	}
 	
 	public static void unfollow(GitUser parent, GitApi gitApi){
