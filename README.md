@@ -11,8 +11,17 @@ While the **best way to acquire followers is to create something really cool or 
 
 #Current Capabilities
 
-1. **Breadth-First Following:** Once you specify a 'target' user. GreedyGit will follow all the followers of the 'target' user. Not only can GreedyGit grab the target's followers, but she can also grab their followers, and followers of their followers, and so on....infinitely many. Although I wouldn't recommend that.
+1. **Recursive Breadth-First Following:** Once you specify a 'target' user. GreedyGit will follow all the followers of the 'target' user. Not only can GreedyGit grab the target's followers, but she can also grab their followers, and followers of their followers, and so on....infinitely many. Although I wouldn't recommend that.
 
-2. **Unfollow the Ungreatful:** Having followed a reasonable amount of users...say 4k.... a few days later you will notice your follower count increasing. A week weeks later, the rate of increase will decline. *At this point you may want to **unfollow** those users who has not reciprocated your kindness!.*
+2. **Unfollow the Ungreatful:** Having followed a reasonable amount of users...say 4k.... a few days later you will notice your follower count increasing. A few weeks later, the rate of increase will decline. *At this point you may want to **unfollow** those users who has not reciprocated your kindness!.* Of course, you can now **move on to following others** 
 
 
+#Installation Instructions
+1. **Download: **GreedyGit/release/GreedyGit.jar
+2. **Run:** *java -cp GreedyGit.jar com.imraazrally.gitbot.GreedyGit [options...]*
+
+#Options
+
+
+###**1. Usage : **Recursive Breadth-First Following:**
+java -cp GreedyGit.jar com.imraazrally.gitbot.GreedyGit -follow -token <access_token> -user <username> -target <the target username> -delay <delay between following in seconds> -depth <number of levels of depth to follow> 
