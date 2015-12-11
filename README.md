@@ -20,7 +20,7 @@ At this stage, the GreedyGit is only capable of **_helping you increase your fol
 
 #Installation Instructions
 1. **Download:** GreedyGit/release/GreedyGit.jar
-2. **Access Token**: Create Personal Access Token with **_'user:follow'_** authorization. 
+2. **Access Token**: Create Personal Access Token in GitHub settings with **_'user:follow'_** authorization. 
 2. **Run:** *java -cp GreedyGit.jar com.imraazrally.gitbot.GreedyGit [options...]*
 
 ###Usage: Recursive Breadth-First Following:
