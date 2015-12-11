@@ -8,7 +8,9 @@
 #Coming Soon!
 
 GreedyGit is a GitBot that utilizes the GitHub's api to do cool things. 
-At this stage, the GreedyGit is only capable of **_helpig you increase your follower count!!_** 
+At this stage, the GreedyGit is only capable of 
+
+##**_helping you increase your follower count!!_** 
 
 #How does GreedyGit aquire followers ?
 While the best way to aquire followers is to create something really cool or contribute to other projects, GreedyGit is a neat little tool. The principal behind GreedyGit is **reciprocity**. People you follow are likely to follow you back. 
