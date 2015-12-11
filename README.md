@@ -1,7 +1,11 @@
 # GreedyGit 
 
-@Author: Imraaz Rally [Technologies: Java, Apache Commons CLI]<br>
-@Version: Alpha
+@Author: Imraaz Rally<br>
+@Technologies: Java, Apache Commons CLI<br>
+@Version: Alpha Release<br>
+@package: com.imraazrally.gitBot
+
+#Coming Soon!
 
 GreedyGit is a GitBot that utilizes the GitHub's api to do cool things. 
 At this stage, the GreedyGit is only capable of **_helpig you increase your follower count!!_** 
@@ -11,6 +15,4 @@ While the best way to aquire followers is to create something really cool or con
 
 Suppose your friend *Lucy* has 412 followers and you want a piece of the action. You will specify Lucy as the 'target' and GreedyGit will automatically follow all 412 followers of Lucy. Not only can GG (GreedyGit) grab Lucy's followers, but she can also grab their followers, and followers of their followers, and so on....
 
-#Installation
-Download the 
-
+#Coming Soon
