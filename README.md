@@ -3,7 +3,7 @@
 @Author: Imraaz Rally<br>
 @Technologies: Java, Apache Commons CLI<br>
 @Version: Alpha Release<br>
-@package: com.imraazrally.gitBot
+@package: com.imraazrally.gitbot
 
 #Coming Soon!
 
