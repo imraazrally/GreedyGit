@@ -20,9 +20,8 @@ While the **best way to acquire followers is to create something really cool or 
 1. **Download: **GreedyGit/release/GreedyGit.jar
 2. **Run:** *java -cp GreedyGit.jar com.imraazrally.gitbot.GreedyGit [options...]*
 
-#Usage
 
-**Recursive Breadth-First Following:**<br>
+##Usage: Recursive Breadth-First Following:
 Pattern: <br>
 **java -cp GreedyGit.jar com.imraazrally.gitbot.GreedyGit** -follow -token {access_token} -user {username} -target {the target username} -delay {delay between following in seconds} -depth {number of levels of depth to follow}
 <br><br>
@@ -31,7 +30,7 @@ Sample:<br>
 
 <br>
 
-**Unfollow the Ungreatful:**<br>
+## Usage: Unfollow the Ungreatful:
 Pattern: <br>
 **java -cp GreedyGit.jar com.imraazrally.gitbot.GreedyGit** -unfollow -token {access_token} -user {username} 
 <br><br>
