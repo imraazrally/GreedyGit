@@ -2,9 +2,7 @@
 
 @Author: Imraaz Rally<br>
 @Technologies: Java, Apache Commons CLI<br>
-@Version: Alpha Release<br>
-@package: com.imraazrally.gitbot
-
+![tree](http://www.eps-egypt.com/images/structure-icon.gif)
 GreedyGit is a GitBot that utilizes the GitHub's api to do cool things. 
 At this stage, the GreedyGit is only capable of **_helping you increase your follower count!!_** 
 
