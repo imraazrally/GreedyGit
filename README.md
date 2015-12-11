@@ -24,7 +24,7 @@ At this stage, the GreedyGit is only capable of **_helping you increase your fol
 
 ###Usage: Recursive Breadth-First Following:
 **Pattern:** <br>
->*java -cp GreedyGit.jar com.imraazrally.gitbot.GreedyGit* -follow -token {access_token} -user {username} -target {the target username} -delay {delay between following in seconds} -depth {number of levels of depth to follow}
+>*java -cp GreedyGit.jar com.imraazrally.gitbot.GreedyGit* -follow -token {access_token} -user {your_username} -target {the target username} -delay {delay between following in seconds} -depth {number of levels of depth to follow}
 
 
 **Sample:**<br>
@@ -34,7 +34,7 @@ At this stage, the GreedyGit is only capable of **_helping you increase your fol
 
 ### Usage: Unfollow the Ungreatful:
 **Pattern:** <br>
->*java -cp GreedyGit.jar com.imraazrally.gitbot.GreedyGit* -unfollow -token {access_token} -user {username} 
+>*java -cp GreedyGit.jar com.imraazrally.gitbot.GreedyGit* -unfollow -token {access_token} -user {your_username} 
 
 **Sample:**<br>
 >*java -cp GreedyGit.jar com.imraazrally.gitbot.GreedyGit* -unfollow -token f8f891287ef1fde40b -user imraazrally
