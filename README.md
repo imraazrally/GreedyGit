@@ -36,5 +36,7 @@ While the **best way to acquire followers is to create something really cool or 
 **Sample:**<br>
 *java -cp GreedyGit.jar com.imraazrally.gitbot.GreedyGit* -unfollow -token f8f891287ef1fde40b -user imraazrally
 
-![greedy](http://icons.iconarchive.com/icons/jonathan-rey/simpsons/256/Homer-Simpson-02-Donut-icon.png)
-###Enjoy! - Imraaz
+<br>
+###Enjoy following! Don't Spam! - Imraaz
+![greedy](https://fortunedotcom.files.wordpress.com/2015/03/tim0315_d.jpg?quality=80)
+
