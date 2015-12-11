@@ -11,7 +11,7 @@ While the **best way to acquire followers is to create something really cool or 
 
 #Current Capabilities
 
-1. **Recursive Breadth-First Following:** Once you specify a 'target' user. GreedyGit will follow all the followers of the 'target' user. Not only can GreedyGit grab the target's followers, but she can also grab their followers, and followers of their followers, and so on....infinitely many. Although I wouldn't recommend that.
+1. **Recursive Breadth-First Following:** Once you specify a 'target' user. GreedyGit will follow all the followers of the 'target' user. Not only can GreedyGit grab the target's followers, but she can also grab their followers, and followers of their followers, and so on....infinitely many. However, I wouldn't recommend spamming. Moderation is key.
 
 2. **Unfollow the Ungreatful:** Having followed a reasonable amount of users...say 4k.... a few days later you will notice your follower count increasing. A few weeks later, the rate of increase will decline. *At this point you may want to **unfollow** those users who has not reciprocated your kindness!.* Of course, you can now **move on to following others** 
 
@@ -19,7 +19,6 @@ While the **best way to acquire followers is to create something really cool or 
 #Installation Instructions
 1. **Download: **GreedyGit/release/GreedyGit.jar
 2. **Run:** *java -cp GreedyGit.jar com.imraazrally.gitbot.GreedyGit [options...]*
-
 
 ##Usage: Recursive Breadth-First Following:
 Pattern: <br>
@@ -37,4 +36,5 @@ Pattern: <br>
 Sample:<br>
 **java -cp GreedyGit.jar com.imraazrally.gitbot.GreedyGit** -unfollow -token f8f891287ef1fde40b -user imraazrally
 
-#Thank you
+![greedy](https://s-media-cache-ak0.pinimg.com/236x/e5/c4/74/e5c474b023f8a0f03239e2b1bf9f8ed6.jpg)
+#Enjoy Acquiring new followers!! - Imraaz
