@@ -24,22 +24,44 @@ public class Follow {
 			try{
 				Thread.sleep(interval*1000);
 			}catch(Exception e){
-				System.out.println("Wait...");
+				System.out.printf("...");
 			}
 			
 			followersInCurrentLevel.add(user);
 		}	
 		
-		//moving to next level.
+		//Having followed all the users at current level, we move onto the next level down the tree
 		for (GitUser user: followersInCurrentLevel)
 			followUsersAtDepthN(myAccount,user,gitApi,level-1,interval);
 	}
 	
-	public static void unfollow(GitUser parent, GitApi gitApi){
-		for (String username: gitApi.getListOfFollowingUsernames(parent)){
-			GitUser user=gitApi.getFactory().getUser(username);
-			//If the user is NOT following the parent, we unfollow.
-			if(!gitApi.isFollowing(user,parent)) gitApi.unfollow(user);
+	public static void unfollow(GitUser user, GitApi gitApi){
+		
+		int MAX=30;
+		
+		/*
+		 *		A GET request to retrieve all the users followed by 'user'
+		 *	    will only result in at most 30 users in the request message at one time.
+		 *		So we have to group the total count of users into groups of 30.
+		 *		
+		 *		In otherwords: we need to unfollow in groups of 30.
+		 * 
+		 */
+		
+		
+		// Total number of users that we are following
+		int followingCount=user.getFollowing();
+		
+		//Because the MAX limit is 30, we subdevide the process into smaller chunks
+		int iterations=followingCount/MAX;
+	
+		for(int i=0; i<iterations; i++){	
+			for (String username: gitApi.getListOfFollowingUsernames(user,MAX)){
+				GitUser following=gitApi.getFactory().getUser(username);
+				//If the user is NOT following the parent, we unfollow.
+				if(!gitApi.isFollowing(following,user)) gitApi.unfollow(following);
+			}
 		}
+			
 	}
 }

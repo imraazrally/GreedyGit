@@ -52,7 +52,6 @@ public class RequestDispatcher {
 			
 			
 		}catch(Exception e){
-			e.printStackTrace();
 			outputBuffer.append("404");
 		}
 		

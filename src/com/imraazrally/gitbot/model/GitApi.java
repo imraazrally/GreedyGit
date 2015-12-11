@@ -41,11 +41,17 @@ public class GitApi {
 		return getUsernames(user.getFollowers(),user.getFollowerUrl());
 	}
 	
-	public String[] getListOfFollowingUsernames(GitUser user){
-		return getUsernames(user.getFollowing(),user.getFollowingUrl());
+	public String[] getListOfFollowingUsernames(GitUser user, int size){
+		return getUsernames(size,user.getFollowingUrl());
 	}
 		
+	
+	/*
+	 *  Checks to see whether user is following the target 
+	 */
+	
 	public boolean isFollowing(GitUser user, GitUser target){
+		
 		String response=dispatcher.fetch(
 											//https://api.github.com/:user/following/:target
 											new StringBuilder("https://api.github.com/users/")

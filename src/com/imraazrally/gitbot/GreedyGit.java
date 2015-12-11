@@ -41,11 +41,34 @@ public class GreedyGit {
 		 */
 
 		
-		//Initializing the command line 
+		/*
+		 *  Setting up the command line interface and options
+		 *  
+		 *  @Option -follow			= to follow users
+		 *  @Option -unfollow		= to unfollow users
+		 *  @Option -token			= your github access_token. 
+		 *  @Option -user 			= your gitHub username  
+		 *  @Option -delay			= wait in seconds before following next user
+		 *  @Option -depth			= recursive depth of the followers
+		 *  @Option -help			= help documentation
+		 *  @Option -target		= username of the target user
+		 */
+		
 		CommandLine CMD=initCli(args);
 		if(CMD==null)return;
 		
-		//Accesstoken is used as the authentication system to access GitHub Api 
+		
+		/*
+		 * GitHub supports Personal Access Tokens.  
+		 * The authentication is done via passing the access_token as a request paremeter.
+		 * 
+		 * Scope: user:follow
+		 *
+		 * More Info : 
+		 * https://help.github.com/articles/creating-an-access-token-for-command-line-use/
+		 * 
+		*/
+		
 		final String accessToken=CMD.getOptionValue("token");
 		final String username=CMD.getOptionValue("user");
 		
@@ -87,18 +110,6 @@ public class GreedyGit {
 	
 	
 	public static CommandLine initCli(String [] args){
-		/*
-		 *  Setting up the command line interface and options
-		 *  
-		 *  @Option -follow			= to follow users
-		 *  @Option -unfollow		= to unfollow users
-		 *  @Option -token			= your github access_token. 
-		 *  @Option -user 			= your gitHub username  
-		 *  @Option -delay			= wait in seconds before following next user
-		 *  @Option -depth			= recursive depth of the followers
-		 *  @Option -help			= help documentation
-		 *  @Option -target		= username of the target user
-		 */
 		
 		CommandLineParser cli=new DefaultParser();
 		Options options=new Options();
