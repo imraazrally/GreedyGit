@@ -25,21 +25,21 @@ At this stage, the GreedyGit is only capable of **_helping you increase your fol
 ###Usage: Recursive Breadth-First Following:
 **Pattern:** <br>
 >*java -cp GreedyGit.jar com.imraazrally.gitbot.GreedyGit* -follow -token {access_token} -user {username} -target {the target username} -delay {delay between following in seconds} -depth {number of levels of depth to follow}
-<br><br>
+
+
 **Sample:**<br>
 >*java -cp GreedyGit.jar com.imraazrally.gitbot.GreedyGit* -follow -token f8f89e8b010ca7409370b4640 -user imraazrally -target mark -delay 4 -depth 3
 
-<br>
+
 
 ### Usage: Unfollow the Ungreatful:
 **Pattern:** <br>
-*java -cp GreedyGit.jar com.imraazrally.gitbot.GreedyGit* -unfollow -token {access_token} -user {username} 
-<br><br>
+>*java -cp GreedyGit.jar com.imraazrally.gitbot.GreedyGit* -unfollow -token {access_token} -user {username} 
+
 **Sample:**<br>
-*java -cp GreedyGit.jar com.imraazrally.gitbot.GreedyGit* -unfollow -token f8f891287ef1fde40b -user imraazrally
+>*java -cp GreedyGit.jar com.imraazrally.gitbot.GreedyGit* -unfollow -token f8f891287ef1fde40b -user imraazrally
 
 <br>
-###Enjoy following! Don't Spam!<br>
-####Imraaz
+>Enjoy following! Don't Spam! - Imraaz Rally<br>
 ![greedy](http://storage.canoe.ca/v1/blogs-prod-photos/7/1/f/4/5/71f4559d67bec0db30edd0c1a694319b.jpg?stmp=1351826532)
 
