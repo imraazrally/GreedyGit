@@ -20,7 +20,6 @@ public class RequestDispatcher {
 	public String fetch(String url, String method){
 		StringBuilder outputBuffer=new StringBuilder();
 		try{
-			System.out.println(url+accessToken);
 			HttpURLConnection request=(HttpURLConnection)new URL(url+accessToken).openConnection();
 			int ch;
 

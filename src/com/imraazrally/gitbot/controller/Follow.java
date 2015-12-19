@@ -66,7 +66,7 @@ public class Follow {
 		int pageCount=followingCount/MAX;
 	
 		for(int page=0; page<pageCount+1; page++){	
-			for (String username: gitApi.getListOfFollowingUsernames(user,MAX)){
+			for (String username: gitApi.getListOfFollowingUsernames(user,MAX,page)){
 				GitUser following=gitApi.getFactory().getUser(username);
 				//If the user is NOT following the parent, we unfollow.
 				if(!gitApi.isFollowing(following,user))gitApi.unfollow(following);

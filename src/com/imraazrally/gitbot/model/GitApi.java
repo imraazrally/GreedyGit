@@ -42,8 +42,8 @@ public class GitApi {
 		return getUsernames(size,user.getFollowerUrl(),page);
 	}
 	
-	public String[] getListOfFollowingUsernames(GitUser user, int size){
-		return getUsernames(size,user.getFollowingUrl(),-1);
+	public String[] getListOfFollowingUsernames(GitUser user, int size, int page){
+		return getUsernames(size,user.getFollowingUrl(),page);
 	}
 		
 	
