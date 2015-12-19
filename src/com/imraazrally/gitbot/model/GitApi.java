@@ -34,15 +34,16 @@ public class GitApi {
 	}
 	
 	/*
-	 * Given a User, retrieve a list of follower usernames
+	 * Given a User, retrieve a list of $size follower usernames at $page
 	 */
 	
-	public String[] getListOfFollowerUsernames(GitUser user){
-		return getUsernames(user.getFollowers(),user.getFollowerUrl());
+	public String[] getListOfFollowerUsernames(GitUser user, int size, int page){
+	
+		return getUsernames(size,user.getFollowerUrl(),page);
 	}
 	
 	public String[] getListOfFollowingUsernames(GitUser user, int size){
-		return getUsernames(size,user.getFollowingUrl());
+		return getUsernames(size,user.getFollowingUrl(),-1);
 	}
 		
 	
@@ -58,6 +59,7 @@ public class GitApi {
 															 .append(user.getUsername())
 															 .append("/following/")
 															 .append(target.getUsername())
+															 .append("?bot=GreedyGit")
 															 .toString()
 											//Request Method			
 											,"GET"
@@ -71,19 +73,20 @@ public class GitApi {
 	
 	
 	public String follow(GitUser user){
-		String url=new StringBuilder("https://api.github.com/user/following/").append(user.getUsername()).toString();
+		String url=new StringBuilder("https://api.github.com/user/following/").append(user.getUsername()).append("?bot=GreedyGit").toString();
 		return dispatcher.fetch(url, "PUT");
 	}
 	
 	public String unfollow(GitUser user){
-		String url=new StringBuilder("https://api.github.com/user/following/").append(user.getUsername()).toString();
+		String url=new StringBuilder("https://api.github.com/user/following/").append(user.getUsername()).append("?bot=GreedyGit").toString();
 		return dispatcher.fetch(url, "DELETE");
 	}
 	
-	private String[] getUsernames(int size, String url){
+	private String[] getUsernames(int size, String url, int page){
 		//an array of usernames (size=number of followers)
 		String [] users=new String [size];
 		//Getting raw json response and converting to array of json objects
+		if(page>-1)url+="&page="+Integer.toString(page);
 		String response= this.dispatcher.fetch(url, "GET");
 		JSONArray jsonResponse=new JSONArray(response);
 		

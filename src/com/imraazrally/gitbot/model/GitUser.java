@@ -32,15 +32,15 @@ public class GitUser {
 	}
 	
 	public String getFollowerUrl(){
-		return String.format("https://api.github.com/users/%s/followers", this.username);
+		return String.format("https://api.github.com/users/%s/followers?bot=GreedyGit", this.username);
 	}
 	
 	public String getFollowingUrl(){
-		return String.format("https://api.github.com/users/%s/following", this.username);
+		return String.format("https://api.github.com/users/%s/following?bot=GreedyGit", this.username);
 	}
 	
 	public String getUserUrl(){
-		return String.format("https://api.github.com/users/%s", this.username);
+		return String.format("https://api.github.com/users/%s?bot=GreedyGit", this.username);
 	}
 	
 	public void setFollowers(int followers){

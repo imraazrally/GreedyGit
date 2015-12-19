@@ -41,18 +41,6 @@ public class GreedyGit {
 		 */
 
 		
-		/*
-		 *  Setting up the command line interface and options
-		 *  
-		 *  @Option -follow			= to follow users
-		 *  @Option -unfollow		= to unfollow users
-		 *  @Option -token			= your github access_token. 
-		 *  @Option -user 			= your gitHub username  
-		 *  @Option -delay			= wait in seconds before following next user
-		 *  @Option -depth			= recursive depth of the followers
-		 *  @Option -help			= help documentation
-		 *  @Option -target		= username of the target user
-		 */
 		
 		CommandLine CMD=initCli(args);
 		if(CMD==null)return;
@@ -110,6 +98,19 @@ public class GreedyGit {
 	
 	
 	public static CommandLine initCli(String [] args){
+
+		/*
+		 *  Setting up the command line interface and options
+		 *  
+		 *  @Option -follow			= to follow users
+		 *  @Option -unfollow		= to unfollow users
+		 *  @Option -token			= your github access_token. 
+		 *  @Option -user 			= your gitHub username  
+		 *  @Option -delay			= wait in seconds before following next user
+		 *  @Option -depth			= recursive depth of the followers
+		 *  @Option -help			= help documentation
+		 *  @Option -target		= username of the target user
+		 */
 		
 		CommandLineParser cli=new DefaultParser();
 		Options options=new Options();
